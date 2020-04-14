@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestMinCostToMaxdepthLeaf(t *testing.T) {
+func TestMinCostToMaxDepthLeaf(t *testing.T) {
 
 	tests := []struct {
 		name      	string
