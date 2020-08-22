@@ -3,14 +3,14 @@ package tree
 import "fmt"
 
 type Node struct {
-	Cost int
-	Left *Node
+	Cost  int
+	Left  *Node
 	Right *Node
 }
 
 /**
 Top level print function wrapper
- */
+*/
 func (n *Node) PreorderPrint() {
 	n.preorderPrint()
 	fmt.Println()
@@ -18,7 +18,7 @@ func (n *Node) PreorderPrint() {
 
 /**
 Recursive helper print function
- */
+*/
 func (n *Node) preorderPrint() {
 	fmt.Printf("%d ", n.Cost)
 
@@ -37,7 +37,7 @@ func (n *Node) preorderPrint() {
 This function makes assumptions about elements of val 0
 We use this to represent a termination condition within the tree. if a node has value 0, we assume this node nil
 We do this to ensure that unique trees are create from a single preorder traversal
- */
+*/
 func PreorderCreate(costs []int) *Node {
 	root, _ := preorderCreate(costs)
 	return root
@@ -47,7 +47,7 @@ func PreorderCreate(costs []int) *Node {
 @return a pointer to the root Node, the remaining costs to be evaluated
 Helper function that keeps track of "costs remaining" as an int slice
 This function is recursively called
- */
+*/
 func preorderCreate(costs []int) (*Node, []int) {
 
 	// null/empty/0 costs
@@ -58,7 +58,7 @@ func preorderCreate(costs []int) (*Node, []int) {
 	}
 
 	// Create current node
-	self := &Node {
+	self := &Node{
 		Cost: costs[0],
 	}
 

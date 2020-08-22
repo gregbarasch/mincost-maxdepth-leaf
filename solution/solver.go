@@ -36,7 +36,6 @@ func MinCostToMaxDepthLeaf(root *tree.Node) (int, int) {
 	} else if ldepth == rdepth {
 		return root.Cost + min(lcost, rcost), 1 + ldepth
 	} else {
-		return  root.Cost + rcost, 1 + rdepth
+		return root.Cost + rcost, 1 + rdepth
 	}
 }
-

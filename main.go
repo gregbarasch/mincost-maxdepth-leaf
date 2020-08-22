@@ -7,11 +7,11 @@ import (
 )
 
 func main() {
-	quickTest([]int{7,8,0,0,12,0,0})
+	quickTest([]int{7, 8, 0, 0, 12, 0, 0})
 
-	quickTest([]int{9,3,0,0,4,0,0})
+	quickTest([]int{9, 3, 0, 0, 4, 0, 0})
 
-	quickTest([]int{3, 7,8,0,0,12,0,0, 9,3,0,0,4,0,0})
+	quickTest([]int{3, 7, 8, 0, 0, 12, 0, 0, 9, 3, 0, 0, 4, 0, 0})
 
 	fmt.Println("COMPLETE")
 }
